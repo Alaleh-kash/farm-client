@@ -60,19 +60,21 @@ export default function AnimalsPage() {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Animal</TableCell>
+                <TableCell>Name</TableCell>
                 <TableCell>Type</TableCell>
-                <TableCell>Farmer</TableCell>
-                <TableCell>Location</TableCell>
+                <TableCell>Farmer ID</TableCell>
+                <TableCell>Created At</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {animals.map((a, index) => (
-                <TableRow key={index}>
-                  <TableCell>{a.animalName || a.AnimalName}</TableCell>
-                  <TableCell>{a.type || a.Type}</TableCell>
-                  <TableCell>{a.farmerName || a.FarmerName}</TableCell>
-                  <TableCell>{a.location || a.Location}</TableCell>
+              {animals.map((a) => (
+                <TableRow key={a.id}>
+                  <TableCell>{a.name}</TableCell>
+                  <TableCell>{a.type}</TableCell>
+                  <TableCell>{a.farmerId}</TableCell>
+                  <TableCell>
+                    {a.createdAt ? new Date(a.createdAt).toLocaleString() : "-"}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>

@@ -62,17 +62,15 @@ export default function FoodsPage() {
               <TableRow>
                 <TableCell>Food</TableCell>
                 <TableCell>Quantity / Day</TableCell>
-                <TableCell>Animal</TableCell>
-                <TableCell>Farmer</TableCell>
+                <TableCell>Animal ID</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {foods.map((f, index) => (
-                <TableRow key={index}>
-                  <TableCell>{f.foodName || f.FoodName}</TableCell>
-                  <TableCell>{f.quantityPerDay || f.QuantityPerDay}</TableCell>
-                  <TableCell>{f.animalName || f.AnimalName}</TableCell>
-                  <TableCell>{f.farmerName || f.FarmerName}</TableCell>
+              {foods.map((f) => (
+                <TableRow key={f.id}>
+                  <TableCell>{f.foodName}</TableCell>
+                  <TableCell>{f.quantityPerDay}</TableCell>
+                  <TableCell>{f.animalId}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

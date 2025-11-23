@@ -1,4 +1,5 @@
 // src/App.js
+// src/App.js
 import React from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import {
@@ -10,10 +11,12 @@ import {
   Button,
 } from "@mui/material";
 import AgricultureIcon from "@mui/icons-material/Agriculture";
+
 import Dashboard from "./pages/Dashboard";
 import AnimalsPage from "./pages/AnimalsPage";
 import FoodsPage from "./pages/FoodsPage";
 import WeatherPage from "./pages/WeatherPage";
+
 import "./App.css";
 
 function NavBar() {
@@ -24,8 +27,9 @@ function NavBar() {
   return (
     <AppBar position="static" elevation={0} color="transparent">
       <Toolbar sx={{ justifyContent: "space-between" }}>
+        {/* Left side */}
         <Box display="flex" alignItems="center" gap={1}>
-          <AgricultureIcon sx={{ fontSize: 30, color: "#4caf50" }} />
+          <AgricultureIcon sx={{ fontSize: 32, color: "#4caf50" }} />
           <Typography
             variant="h6"
             component={Link}
@@ -40,6 +44,7 @@ function NavBar() {
           </Typography>
         </Box>
 
+        {/* Right side */}
         <Box display="flex" gap={1}>
           <Button
             component={Link}
@@ -48,6 +53,7 @@ function NavBar() {
           >
             Animals
           </Button>
+
           <Button
             component={Link}
             to="/foods"
@@ -55,6 +61,7 @@ function NavBar() {
           >
             Foods
           </Button>
+
           <Button
             component={Link}
             to="/weather"
@@ -72,6 +79,7 @@ function App() {
   return (
     <Box className="App-root">
       <NavBar />
+
       <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
         <Routes>
           <Route path="/" element={<Dashboard />} />
