@@ -1,0 +1,11 @@
+/* src/App.css */
+.App-root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9fbff 0%, #f1f8f4 100%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f9fbff;
+}
