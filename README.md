@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Alaleh-kash/farm-client/main/FARM_IMAGE.png" 
+       alt="Farm Dashboard Banner" 
+       width="100%">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌾 Farm Dashboard — React Frontend
 
-## Available Scripts
+A clean and modern React dashboard that displays farm data such as animals, foods, and weather.
+This project connects to a .NET 8 Web API backend (FarmApi) and uses Material UI for UI components.
 
-In the project directory, you can run:
+✨ Features
+🐮 Animals Module
 
-### `npm start`
+List of all animals on the farm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Shows name, type, farmer, created date
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Beautiful Material UI table
 
-### `npm test`
+API: GET /farm/animals
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🌽 Foods Module
 
-### `npm run build`
+Shows food per animal per day
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Displays food name, quantity, animal, farmer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clean Material UI table
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+API: GET /farm/foods
 
-### `npm run eject`
+☀️ Weather Module
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Displays the current farm location weather
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Uses API: /farm/weather (mock or real API depending on backend)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Simple modern UI card
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🏗️ Project Structure
+src/
+  pages/
+    AnimalsPage.js
+    FoodsPage.js
+    WeatherPage.js
+    Dashboard.js
+  api.js
+  App.js
+  index.js
 
-## Learn More
+🚀 Tech Stack
+Frontend	Backend	UI
+React 18	.NET 8 Web API	Material UI
+React Router	SQL Server (via EF Core)	Custom CSS
+Fetch API	Entity Framework Core	Icons + Emoji
+📦 Installation (Frontend)
+git clone https://github.com/Alaleh-kash/farm-client.git
+cd farm-client
+npm install
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app will run at:
 
-### Code Splitting
+👉 http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🔌 API Configuration
 
-### Analyzing the Bundle Size
+Your frontend reads the backend URL from:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+src/api.js
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Default:
 
-### Advanced Configuration
+export const API_BASE =
+  process.env.REACT_APP_API_URL || "https://farmapi-yfvr.onrender.com/farm";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+To use local backend, create a .env file:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+REACT_APP_API_URL=http://localhost:5050/farm
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Restart React after editing .env.
+
+🔗 Backend Repository (FarmApi)
+
+.NET API backend:
+👉 https://github.com/Alaleh-kash/FarmApi
+
+📸 Screenshots
+
+You can add screenshots like this:
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### Animals Page
+![Animals](./screenshots/animals.png)
+
+### Foods Page
+![Foods](./screenshots/foods.png)
+
+
+👉 Create a folder in your project:
+
+farm-client/screenshots/
+
+
+Then drag your screenshot images there.
+
+🏷️ Recommended GitHub Topics
+
+Add these in your GitHub repo:
+
+react
+reactjs
+material-ui
+dotnet
+dotnet-api
+entity-framework-core
+sql-server
+dashboard
+fullstack-project
+farm-management
+
+📘 GitHub Repo Description
+
+Copy this text into GitHub description:
+
+A clean full-stack farm management dashboard built with React and .NET 8 Web API. View animals, foods, and weather using a modern Material UI interface.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Alaleh-kash/farm-client/main/FARM_IMAGE.png" 
+       alt="Farm Dashboard Banner" 
+       width="100%">
+</p>
+
+
+❤️ Author
+
+Built with love by Alaleh Kashani (Ala)
+✨ Frontend & Mobile Developer (React / React Native / .NET)
